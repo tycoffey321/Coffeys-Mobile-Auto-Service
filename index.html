@@ -69,6 +69,47 @@
       text-align: center;
       padding: 1rem;
     }
+
+    /* Free Quote Section */
+    #free-quote {
+      background-color: #f9f9f9;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+      border: 1px solid #ddd;
+    }
+
+    #free-quote h2 {
+      color: #d32f2f;
+    }
+
+    #free-quote form {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    #free-quote input, 
+    #free-quote textarea {
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #free-quote button {
+      background-color: #d32f2f;
+      color: white;
+      padding: 1rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    #free-quote button:hover {
+      background-color: #c2185b;
+    }
   </style>
 </head>
 <body>
@@ -77,7 +118,6 @@
     <nav>
       <a href="#home">Home</a>
       <a href="#services">Services</a>
-      <a href="#discounts">Discounts</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -99,27 +139,23 @@
     </ul>
   </section>
 
-  <section id="discounts">
-    <h2>Discounts & Offers</h2>
-    <p>At Coffey's Mobile Auto Service, we believe in supporting our community and offering great value. We are proud to offer the following discounts:</p>
-    <ul>
-      <li><strong>Senior Citizen Discount:</strong> Get 10% off on all services for senior citizens.</li>
-      <li><strong>Military Discount:</strong> Get 10% off as a token of appreciation for our service members.</li>
-    </ul>
-    <p>Additionally, Coffey's Mobile Auto Service is a <strong>military-owned business</strong>, and we take pride in serving those who have served our country.</p>
-  </section>
-
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Call or text: <strong>518-291-6294</strong></p>
     <p>Email: <a href="mailto:tycoffey321@gmail.com">tycoffey321@gmail.com</a></p>
     <p>Accepted Payments: Cash, Venmo, CashApp</p>
 
+    <!-- Combined Contact and Free Quote Form -->
     <form action="https://formsubmit.co/tycoffey321@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
-      <button type="submit">Send Message</button>
+      
+      <!-- Free Quote Section -->
+      <h3>Get Your Free Quote</h3>
+      <input type="text" name="vehicle" placeholder="Vehicle Make, Model, Year" required />
+      <textarea name="message" rows="4" placeholder="Describe the services you need (oil change, brakes, etc.)" required></textarea>
+      
+      <button type="submit">Request Quote</button>
     </form>
   </section>
 
